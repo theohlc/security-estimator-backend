@@ -5,13 +5,13 @@ class PropertiesSerializer
 
     def to_serialized_json
         options = {
-          include: {
-            buildings: {
-              methods: :cost 
-            }
-          },
-          except: [:updated_at],
+            include: {
+                buildings: {
+                    methods: :cost 
+                }
+            },
+            except: [:updated_at],
         }
         @property.to_json(options)
-      end 
+    end 
 end

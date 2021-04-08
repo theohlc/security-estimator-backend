@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_ground_windows: 1
+  num_high_windows: 1
+  name: MyString
+  num_doors: 1
+  num_vehicle_doors: 1
+  property: one
+
+two:
+  num_ground_windows: 1
+  num_high_windows: 1
+  name: MyString
+  num_doors: 1
+  num_vehicle_doors: 1
+  property: two

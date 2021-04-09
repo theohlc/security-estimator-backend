@@ -8,4 +8,16 @@ class PropertiesController < ApplicationController
         property = Property.find(params[:id])
         render json: PropertiesSerializer.new(property).to_serialized_json
     end
+
+    def create
+        property = Property.new(property_params)
+        property.save
+    end
+
+    private
+
+    def property_params
+      params.require(:property_info).permit(:name, :fence_length, :owner)
+    end
+
 end

@@ -12,6 +12,7 @@ class PropertiesController < ApplicationController
     def create
         property = Property.new(property_params)
         property.save
+        render json: PropertiesSerializer.new(property).to_serialized_json
     end
 
     private

@@ -1,10 +1,10 @@
 class Building < ApplicationRecord
   belongs_to :property
-  validates: name, presence: true
-  validates: num_ground_windows, presence: true
-  validates: num_high_windows, presence: true
-  validates: num_doors, presence: true
-  validates: num_vehicle_doors, presence: true
+  validates :name,                 presence: true
+  validates :num_ground_windows,   presence: true
+  validates :num_high_windows,     presence: true
+  validates :num_doors,            presence: true
+  validates :num_vehicle_doors,    presence: true
 
 
   def cost

@@ -10,7 +10,8 @@ class BuildingsController < ApplicationController
     end
 
     def create
-        building = building.new(building_params)
+        property = Property.find(params[:building_info][:property_id])
+        building = property.buildings.new(building_params)
         building.save
         render json: BuildingsSerializer.new(building).to_serialized_json
     end

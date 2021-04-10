@@ -8,4 +8,17 @@ class BuildingsController < ApplicationController
         building = Building.find(params[:id])
         render json: BuildingsSerializer.new(building).to_serialized_json
     end
+
+    def create
+        building = building.new(building_params)
+        building.save
+        render json: BuildingsSerializer.new(building).to_serialized_json
+    end
+
+    private
+
+    def building_params
+      params.require(:building_info).permit(:name, :num_ground_windows, :num_high_windows, :num_doors, :num_vehicle_doors)
+    end
+
 end

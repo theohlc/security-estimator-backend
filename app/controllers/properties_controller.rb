@@ -15,6 +15,11 @@ class PropertiesController < ApplicationController
         render json: PropertiesSerializer.new(property).to_serialized_json
     end
 
+    def destroy
+        property = Property.find(params[:id])
+        property.destroy
+    end
+
     private
 
     def property_params

@@ -16,6 +16,11 @@ class BuildingsController < ApplicationController
         render json: BuildingsSerializer.new(building).to_serialized_json
     end
 
+    def destroy
+        building = Building.find(params[:id])
+        building.destroy
+    end
+
     private
 
     def building_params

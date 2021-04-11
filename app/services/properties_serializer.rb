@@ -10,7 +10,8 @@ class PropertiesSerializer
                     methods: :cost 
                 }
             },
-            except: [:updated_at],
+            except: [:updated_at, :created_at],
+            methods: [:cost, :fence_cost]
         }
         @property.to_json(options)
     end 

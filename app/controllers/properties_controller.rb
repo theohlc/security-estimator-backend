@@ -21,6 +21,14 @@ class PropertiesController < ApplicationController
         property.destroy
     end
 
+    def cost
+        property = Property.find(params[:id])
+        render json: {
+            cost: property.cost,
+            fenceCost: property.fence_cost
+        }
+    end
+
     private
 
     def property_params

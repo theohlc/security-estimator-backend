@@ -17,6 +17,7 @@ class PropertiesController < ApplicationController
 
     def destroy
         property = Property.find(params[:id])
+        property.buildings.destroy_all
         property.destroy
     end
 

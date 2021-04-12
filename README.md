@@ -1,24 +1,25 @@
-# README
+## README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Security Estimator
 
-Things you may want to cover:
+Security Estimator is a tool providing buisnesses with a rough estimate of the cost to secure their properties and buildings. It runs using a rails backend and a javascript/HTML frontend. For the frontend please go to: https://github.com/theohlc/security-estimator-frontend
 
-* Ruby version
+## Installation
 
-* System dependencies
+To install this backend, clone from github into your prefered directory. Then execute the following commands in the console:
+`
+$   bundle install
+$   rails db:migrate
+`
 
-* Configuration
+## Use
 
-* Database creation
+Use the ` rails s ` command to start the rails server. Then use the frontend to use the application.
 
-* Database initialization
+## Contributing
 
-* How to run the test suite
+Bug reports and pull requests are welcome on GitHub at https://github.com/theohlc/security-estimator-backend. Please add comments.
 
-* Services (job queues, cache servers, search engines, etc.)
+## License
 
-* Deployment instructions
-
-* ...
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

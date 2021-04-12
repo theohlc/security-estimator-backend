@@ -12,7 +12,7 @@ class Property < ApplicationRecord
     end
 
     def fence_cost
-        fence_length*5
+        fence_length*3
     end
 
 end
